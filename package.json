@@ -1,0 +1,24 @@
+{
+  "name": "angular-no-track-social",
+  "version": "1.0.0",
+  "description": "Social Buttons für Angular that don't track you!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://plhmhck@github.com/plhmhck/angular-no-track-social.git"
+  },
+  "author": "Patrick Lehmhecker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plhmhck/angular-no-track-social/issues"
+  },
+  "homepage": "https://github.com/plhmhck/angular-no-track-social#readme",
+  "devDependencies": {
+    "karma": "^0.13.21",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.7"
+  }
+}
