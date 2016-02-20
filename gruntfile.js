@@ -3,6 +3,11 @@ module.exports = function (grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    shell: {
+      tsc: {
+        command: 'tsc'
+      }
+    },
     jshint: {
       options: {
         jshintrc: true
@@ -15,17 +20,18 @@ module.exports = function (grunt) {
       },
       build: {
         files: {
-          'angular-no-track-social.min.js': ['angular-no-track-social.js']
+          'ngular-no-track-social.min.js': ['angular-no-track-social.js']
         }
       }
     }
   });
 
   // Load the plugin that provides the "uglify" task.
+  grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
   // Default task(s).
-  grunt.registerTask('default', ['jshint', 'uglify']);
-
+  grunt.registerTask('default', ['shell:tsc', 'jshint', 'uglify']);
+  grunt.registerTask('ts', ['ts']);
 };
